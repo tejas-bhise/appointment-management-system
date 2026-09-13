@@ -127,8 +127,6 @@ function App() {
       setShowForm(false)
       setEditingAppointment(null)
       await loadAppointments()
-    } catch (requestError) {
-      setError(requestError.message)
     } finally {
       setSaving(false)
     }
