@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📅 Appointment Board
+# Appointment Board
 
 ### Full-Stack Appointment Management for Small Teams
 
@@ -8,13 +8,13 @@ Create, manage, filter and track appointments from one clean workspace.
 
 <br>
 
-<img src="frontend/public/appointment-board-dashboard.png" alt="Appointment Board Dashboard" width="950">
+<a href="https://appointment-management-system-iota.vercel.app/">
+<img src="https://img.shields.io/badge/🚀%20VISIT%20LIVE%20APPLICATION-2563EB?style=for-the-badge">
+</a>
 
 <br><br>
 
-<a href="#"><img src="https://img.shields.io/badge/Frontend-React%20%2B%20Vite-61DAFB?style=for-the-badge&logo=react&logoColor=white"></a>
-<a href="#"><img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"></a>
-<a href="#"><img src="https://img.shields.io/badge/Database-PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white"></a>
+<img src="frontend/public/appointment-board-dashboard.png" alt="Appointment Board Dashboard" width="950">
 
 </div>
 
@@ -22,122 +22,122 @@ Create, manage, filter and track appointments from one clean workspace.
 
 ## 🎯 What I Built
 
-Appointment Board is a full-stack scheduling application designed around a simple team workflow:
-
 <div align="center">
 
-**Create → Manage → Complete / Cancel → Track**
+### Create → Manage → Complete / Cancel → Track
 
 </div>
 
-It solves the core scheduling problem by combining appointment management, filtering, persistent storage and server-side time-slot protection in one interface.
+Appointment Board is a full-stack scheduling application designed for a small team workflow.
+
+It combines appointment management, filtering, persistent storage and server-side time-slot protection in one interface.
 
 ---
 
-## ⚡ What You Can Do
+## 🛠️ Technology Stack
 
-<table>
+<div align="center">
+
+<table width="100%">
+
 <tr>
-<td width="25%" align="center">
 
-### ➕
-### Create
+<td width="18%" align="center">
 
-Add an appointment with title, description, date and time.
+### Frontend
 
 </td>
-<td width="25%" align="center">
 
-### ✏️
-### Manage
+<td align="left">
 
-Edit existing appointments whenever details change.
-
-</td>
-<td width="25%" align="center">
-
-### 🔎
-### Filter
-
-Filter the board by date, status or both.
+<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white">
+<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white">
+<img src="https://img.shields.io/badge/Lucide_React-000000?style=for-the-badge&logo=lucide&logoColor=white">
 
 </td>
-<td width="25%" align="center">
 
-### 🛡️
-### Protect
-
-Prevent overlapping active appointments.
-
-</td>
 </tr>
+
+<tr>
+
+<td width="18%" align="center">
+
+### Backend
+
+</td>
+
+<td align="left">
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+<img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white">
+<img src="https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white">
+<img src="https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white">
+<img src="https://img.shields.io/badge/Uvicorn-499848?style=for-the-badge&logo=uvicorn&logoColor=white">
+
+</td>
+
+</tr>
+
+<tr>
+
+<td width="18%" align="center">
+
+### Database & Tools
+
+</td>
+
+<td align="left">
+
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white">
+<img src="https://img.shields.io/badge/Neon-000000?style=for-the-badge&logo=neon&logoColor=white">
+<img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white">
+<img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=black">
+<img src="https://img.shields.io/badge/Vercel_Analytics-000000?style=for-the-badge&logo=vercel&logoColor=white">
+
+</td>
+
+</tr>
+
 </table>
 
-<br>
+</div>
 
-| Feature | Implementation |
-|---|---|
-| Appointment creation | Form validation + REST API |
-| Appointment editing | Update API + conflict validation |
-| Completion | Dedicated status action |
-| Cancellation | Dedicated status action without deletion |
-| Date filtering | Backend query filtering |
-| Status filtering | Scheduled / Completed / Cancelled |
-| Conflict prevention | Backend overlap validation |
-| Persistence | PostgreSQL database |
-| User feedback | Success, error, loading and empty states |
+---
+
+## 🏗️ Architecture
+
+<div align="center">
+
+<img src="frontend/public/appointment-management-architecture.png" alt="Appointment Management System Architecture" width="1100">
+
+</div>
 
 ---
 
 ## 🔄 How the Application Works
 
-The complete request flow is:
-
 <div align="center">
 
-### 👤 User
-Interacts with the dashboard
-
-↓  
-
-### ⚛️ React Frontend
-Collects input and manages the interface
-
-↓
-
-### 🚀 FastAPI REST API
-Validates data and applies business rules
-
-↓
-
-### 🗄️ SQLAlchemy
-Communicates with the database
-
-↓
-
-### 🐘 PostgreSQL
-Stores appointment data
-
-↓
-
-### 🔁 API Response
-Result is returned to React
-
-↓
-
-### 🖥️ Dashboard
-UI updates with the latest appointment state
+| 👤 User | ⚛️ React Frontend | 🚀 FastAPI REST API | 🗄️ SQLAlchemy | 🐘 PostgreSQL |
+|:---:|:---:|:---:|:---:|:---:|
+| Interacts with the dashboard | Collects input & manages UI | Validates data & business rules | Handles database operations | Stores persistent data |
 
 </div>
 
+**Flow:**
+
+**User → React → FastAPI → SQLAlchemy → PostgreSQL → API Response → Dashboard**
+
 ### Example: Adding an Appointment
 
-1. The user selects Add Appointment.
+1. The user selects **Add Appointment**.
 2. The form collects the appointment details.
-3. Basic required-field and time validation happens in the frontend.
+3. Required-field and time validation happens in the frontend.
 4. React sends the appointment to the FastAPI API.
 5. FastAPI validates the request again.
-6. The backend checks for an overlapping active appointment.
+6. The backend checks for an overlapping appointment.
 7. If the slot is available, the appointment is stored in PostgreSQL.
 8. The created appointment is returned to the frontend.
 9. The dashboard updates and displays the new appointment.
@@ -177,19 +177,39 @@ The same frontend → API → database flow is used for editing, filtering, comp
 
 ## 🛡️ Time-Slot Conflict Protection
 
-A key requirement is that two active appointments must not overlap.
+<div align="center">
 
-For appointments on the same date, the backend checks whether:
+### Overlapping appointments are rejected by the backend
 
-**new start < existing end**
+<br>
 
-and
+| New Start | Condition | Existing End |
+|:---:|:---:|:---:|
+| **New Start** | **<** | **Existing End** |
 
-**new end > existing start**
+**AND**
 
-If both conditions are true, the appointment overlaps an existing scheduled appointment and the request is rejected.
+| New End | Condition | Existing Start |
+|:---:|:---:|:---:|
+| **New End** | **>** | **Existing Start** |
 
-This rule is enforced by the backend rather than relying only on the browser, making the business rule authoritative.
+</div>
+
+When both conditions are true for appointments on the **same date**, the appointments overlap and the new request is rejected with a clear error message.
+
+### Example
+
+<div align="center">
+
+| Existing Appointment | New Appointment | Result |
+|:---:|:---:|:---:|
+| 09:00 – 10:00 | 09:30 – 10:30 | ❌ **Conflict** |
+| 09:00 – 10:00 | 10:00 – 11:00 | ✅ **Available** |
+| 09:00 – 10:00 | 10:30 – 11:30 | ❌ **Conflict** |
+
+</div>
+
+The rule is enforced by FastAPI rather than relying only on frontend validation.
 
 When editing an appointment, its own existing record is excluded from the conflict check.
 
@@ -211,157 +231,12 @@ Cancelled appointments are intentionally kept visible instead of being deleted.
 
 ---
 
-## 🎨 Interface
-
-The dashboard is designed for quick visual scanning.
-
-The interface provides:
-
-- Clear appointment cards
-- Status-based visual indicators
-- Date and time displayed prominently
-- Direct appointment actions
-- Compact dashboard statistics
-- Date and status filtering
-- Success and error feedback
-- Loading states
-- Empty states
-- Responsive layout
-
-The UI focuses on the required scheduling workflow without adding unrelated functionality.
-
----
-
-## 🏗️ Architecture
-
-<div align="center">
-
-| Frontend | Backend | Database |
-|:---:|:---:|:---:|
-| ⚛️ React + Vite | 🚀 FastAPI | 🐘 PostgreSQL |
-| UI & State | REST API & Logic | Persistent Data |
-
-</div>
-
-The frontend never connects directly to the database.
-
-All data operations follow:
-
-**React → FastAPI → SQLAlchemy → PostgreSQL**
-
-This keeps database credentials on the backend and allows the server to enforce the application's business rules.
-
----
-
-## 🛠️ Technology Stack
-
-<div align="center">
-
-### Frontend
-
-React · Vite · JavaScript · Tailwind CSS · Lucide React
-
-### Backend
-
-Python · FastAPI · SQLAlchemy · Pydantic · Uvicorn
-
-### Database
-
-PostgreSQL · Neon
-
-### Deployment
-
-Vercel · Render
-
-### Analytics
-
-Vercel Analytics
-
-</div>
-
----
-
-## 💡 Important Engineering Decisions
-
-**Backend-authoritative validation**  
-The frontend provides immediate feedback, but important validation and conflict rules are also enforced by FastAPI.
-
-**Persistent relational storage**  
-PostgreSQL is used because appointments are structured records that require filtering, updates and reliable persistence.
-
-**Cancellation instead of deletion**  
-Cancelling changes the appointment status while preserving the record for visibility and history.
-
-**Simple architecture**  
-The application uses a straightforward React → FastAPI → PostgreSQL architecture without unnecessary services or complexity.
-
-**Environment-based configuration**  
-Database credentials and environment-specific API configuration are kept outside the source code.
-
----
-
-## 📌 Assumptions
-
-- The application is designed for a small team.
-- Authentication and user accounts are outside the provided task scope.
-- Appointment statuses are limited to Scheduled, Completed and Cancelled.
-- Cancelled appointments remain visible but do not occupy an active scheduling slot.
-- Only scheduled appointments are considered when checking availability.
-- PostgreSQL is the persistent source of appointment data.
-- Sample appointments are included so the application can be reviewed immediately.
-
----
-
-## 🚀 Deployment
-
-<div align="center">
-
-**GitHub**  
-Source Code
-
-↓
-
-**Vercel**  
-React Frontend + Analytics
-
-↓
-
-**Render**  
-FastAPI Backend
-
-↓
-
-**Neon**  
-PostgreSQL Database
-
-</div>
-
-The frontend communicates with the deployed FastAPI backend through an environment-configured API URL.
-
-The backend connects to PostgreSQL using a server-side database connection string.
-
----
-
-## 📁 Repository
-
-The repository contains two main applications:
-
-**frontend/**  
-React + Vite client application
-
-**backend/**  
-FastAPI REST API and database layer
-
-The project also includes environment examples and the sample-data seeding script required for local setup.
-
----
-
 <div align="center">
 
 ## Full Stack Developer Intern Practical Task
 
 ### React • FastAPI • PostgreSQL • REST API
 
-**Appointment Board**
+**Appointment Management System**
 
 </div>
