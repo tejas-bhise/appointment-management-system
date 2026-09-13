@@ -64,3 +64,13 @@ export async function cancelAppointment(id) {
     method: 'PATCH',
   })
 }
+
+
+export async function warmUpServer() {
+  try {
+    await request('/api/health')
+    return true
+  } catch {
+    return false
+  }
+}

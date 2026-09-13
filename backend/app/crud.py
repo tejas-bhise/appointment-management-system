@@ -44,7 +44,6 @@ def has_conflict(
 ) -> bool:
     query = select(Appointment).where(
         Appointment.date == appointment_date,
-        Appointment.status == "scheduled",
         Appointment.start_time < end_time,
         Appointment.end_time > start_time,
     )

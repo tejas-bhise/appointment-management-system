@@ -18,6 +18,7 @@ import {
   createAppointment,
   getAppointments,
   updateAppointment,
+  warmUpServer,
 } from './services/api'
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
 
   const [error, setError] = useState('')
   const [message, setMessage] = useState('')
+  const [showStartupNotice, setShowStartupNotice] = useState(true)
 
   const [showForm, setShowForm] = useState(false)
   const [editingAppointment, setEditingAppointment] = useState(null)
@@ -54,11 +56,27 @@ function App() {
   }, [date, status])
 
   useEffect(() => {
+    const noticeTimer = window.setTimeout(() => {
+      setShowStartupNotice(false)
+    }, 12000)
+
+    return () => {
+      window.clearTimeout(noticeTimer)
+    }
+  }, [])
+
+  useEffect(() => {
     let cancelled = false
 
     async function fetchAppointments() {
       setLoading(true)
       setError('')
+
+      await warmUpServer()
+
+      if (cancelled) {
+        return
+      }
 
       try {
         const data = await getAppointments({
@@ -200,6 +218,14 @@ function App() {
       <Header onAdd={openCreateForm} />
 
       <main className="relative z-[1] mx-auto max-w-[1480px] px-4 pb-10 pt-5 sm:px-6 lg:px-8 lg:pt-6">
+        {showStartupNotice && (
+          <div className="startup-notice-wrap" role="status">
+            <div className="startup-notice">
+              <span>Waking up the server… First visit may take up to a minute. Thank you for your patience.</span>
+            </div>
+          </div>
+        )}
+
         {/* Compact premium hero */}
         <section className="premium-panel hero-panel mb-4 overflow-hidden rounded-[24px] px-5 py-5 sm:px-6 sm:py-5">
           <div className="hero-orb hero-orb-one" />
